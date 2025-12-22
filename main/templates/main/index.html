@@ -4,9 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Запчасти для японских авто по двигателю — Алматы | MY AVTO</title>
-    <meta name="description" content="Запчасти по двигателю для японских автомобилей. Алматы. Подбор по VIN. Доставка по регионам.">
 
+    <meta name="description" content="Запчасти по двигателю для японских автомобилей. Алматы. Подбор по VIN. Доставка по регионам.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {
+            if (document.scripts[j].src === r) { return; }
+        }
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0];
+        k.async=1;k.src=r;a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105971913', 'ym');
+
+    ym(105971913, 'init', {
+        webvisor:true,
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+    });
+    </script>
+    <!-- /Yandex.Metrika counter -->
 
     <style>
         body {
@@ -45,32 +66,13 @@
             box-shadow: 0 10px 40px rgba(34,197,94,0.4);
         }
 
-        .whatsapp-float {
-            position: fixed;
-            right: 25px;
-            bottom: 25px;
-            width: 60px;
-            height: 60px;
-            background: #22c55e;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 10px 30px rgba(34,197,94,0.5);
-            z-index: 999;
-        }
-        .whatsapp-float img {
-            width: 30px;
-        }
-        
-        /* ЛОГОТИПЫ */
+        /* Бренды */
         .brands {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
             gap: 20px;
             margin-top: 50px;
         }
-        
         .brand-item {
             background: #ffffff;
             border-radius: 16px;
@@ -79,52 +81,36 @@
             align-items: center;
             justify-content: center;
             box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        
-        .brand-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(0,0,0,0.35);
-        }
-        
         .brand-item img {
             max-height: 45px;
             max-width: 90px;
             object-fit: contain;
         }
-        
-        
+
         section {
             padding: 80px 0;
         }
 
-        /* КАРТОЧКИ */
         .grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 30px;
         }
-        
         @media (max-width: 1100px) {
-            .grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+            .grid { grid-template-columns: repeat(2, 1fr); }
         }
-        
         @media (max-width: 600px) {
-            .grid {
-                grid-template-columns: 1fr;
-            }
+            .grid { grid-template-columns: 1fr; }
         }
+
         .card {
             background: #020617;
             border-radius: 20px;
             padding: 25px;
-            height: 100%;
             display: flex;
             flex-direction: column;
         }
-        
         .card img {
             height: 160px;
             object-fit: contain;
@@ -138,18 +124,29 @@
         }
     </style>
 </head>
+
 <body>
+
+<!-- noscript для Метрики (должен быть в body) -->
+<noscript>
+<div>
+    <img src="https://mc.yandex.ru/watch/105971913"
+         style="position:absolute; left:-9999px;" alt="" />
+</div>
+</noscript>
 
 <header>
     <div class="container">
         <h1>Запчасти для японских авто по двигателю</h1>
         <p>Алматы • Подбор по VIN • Доставка по регионам</p>
 
-        <a class="btn" href="https://wa.me/77015509377" target="_blank">
+        <a class="btn"
+           href="https://wa.me/77015509377"
+           onclick="ym(105971913,'reachGoal','whatsapp'); return true;"
+           target="_blank">
             Написать в WhatsApp
         </a>
 
-        <!-- ЛОГОТИПЫ МАРОК -->
         <div class="brands">
             <div class="brand-item"><img src="{% static 'img/brands/toyota.png' %}"></div>
             <div class="brand-item"><img src="{% static 'img/brands/honda.png' %}"></div>
@@ -170,19 +167,16 @@
             <h3>Прокладки и ремкомплекты</h3>
             <p>ГБЦ, клапанная крышка, впуск/выпуск, полный комплект.</p>
         </div>
-
         <div class="card">
             <img src="{% static 'img/parts/bearings.png' %}">
             <h3>Вкладыши</h3>
             <p>Коренные и шатунные. Стандарт и ремонтные размеры.</p>
         </div>
-
         <div class="card">
             <img src="{% static 'img/parts/piston.png' %}">
             <h3>Поршни</h3>
             <p>Оригинал и аналоги. Проверенные бренды.</p>
         </div>
-
         <div class="card">
             <img src="{% static 'img/parts/teikin_box.png' %}">
             <h3>Поршни TEIKIN</h3>
@@ -190,7 +184,7 @@
         </div>
     </div>
 </section>
-<!-- SEO-БЛОК -->
+
 <section style="padding:60px 0;">
     <div class="container" style="color:#94a3b8; font-size:15px;">
         <h2>Запчасти по двигателю в Алматы</h2>
@@ -201,8 +195,6 @@
         </p>
     </div>
 </section>
-<!-- /SEO-БЛОК -->
-
 
 <footer>
     © 2025 MY AVTO • Запчасти по двигателю • Алматы

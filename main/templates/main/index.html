@@ -18,18 +18,33 @@
       gtag('config', 'AW-18062973221');
     </script>
     <!-- /Google tag -->
-    <!-- Конверсия "Клик по WhatsApp" -->
+   <!-- Конверсия "Клик по WhatsApp" — исправленная версия -->
 <script>
-  document.addEventListener('click', function(e) {
-    if (e.target.closest('a[href*="wa.me"], a[href*="whatsapp"], button[contains("WhatsApp")]')) {
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log('✅ WhatsApp tracking script загружен');
+
+    function sendWhatsAppConversion() {
       gtag('event', 'conversion', {
         'send_to': 'AW-18062973221/E1Q9CPv71ZgcEKWyjKVD'
       });
-      console.log('✅ WhatsApp конверсия отправлена!');
+      console.log('✅ WhatsApp конверсия отправлена в Google Ads!');
     }
+
+    // Находим все ссылки WhatsApp
+    const waButtons = document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]');
+
+    console.log(`Найдено ${waButtons.length} кнопок WhatsApp`);
+
+    // Добавляем обработчик на каждую кнопку
+    waButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        console.log('Клик по WhatsApp зафиксирован');
+        // Небольшая задержка, чтобы не мешать открытию WhatsApp
+        setTimeout(sendWhatsAppConversion, 150);
+      });
+    });
   });
 </script>
-
     <style>
         body {
             margin: 0;
